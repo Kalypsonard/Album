@@ -1,0 +1,221 @@
+
+/*Tête*/
+.container {
+    display: flex; /* Utilise flexbox pour disposer les éléments côte à côte */
+    align-items: flex-start; /* Aligne le haut des éléments */
+    margin: 15px; /* Marge autour du conteneur */
+    justify-content: space-around;
+}
+
+.music-interface, .info-box {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(169, 224, 228, 0.279), rgba(239, 194, 239, 0.8));; /* Couleur de fond avec transparence pour les deux boîtes */
+    border-radius: 30px; /* Arrondir les coins */
+    padding: 40px; /* Espace intérieur */
+    max-width: 45%; /* Largeur maximale pour chaque boîte */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ombre pour effet de profondeur */
+    
+}
+.tracklist {
+    background: linear-gradient(135deg, rgba(169, 224, 228, 0.279), rgba(239, 194, 239, 0.8)); /* Dégradé */
+    border-radius: 15px; /* Coins arrondis */
+    padding: 20px; /* Espace intérieur */
+    color: white; /* Couleur du texte */
+    max-width: 400px; /* Largeur maximale de la box */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ombre pour effet de profondeur */
+    margin-top: 20px; /* Espace au-dessus de la box */
+}
+
+.tracklist h3 {
+    margin: 0 0 10px 0; /* Marges autour du titre */
+    font-size: 20px; /* Taille du titre */
+    text-align: center;
+}
+
+.tracklist ul {
+    list-style-type: none; /* Supprime les puces par défaut */
+}
+
+.tracklist li {
+    padding: 5px 0; /* Espacement entre les éléments de la liste */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Ligne de séparation */
+}
+
+.tracklist li:last-child {
+    border-bottom: none; /* Retire la ligne de séparation pour le dernier élément */
+}
+
+body{
+    background-color: rgb(255, 227, 227);
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 10px 10px;
+    margin: 40px;
+}
+body, a{
+    font-family: 'Cinzel', serif; /* Police épique et dramatique */
+    font-weight: 700; /* Accentue l'effet théâtral */
+    color: #957DAD;
+}
+h1{
+    color: #957DAD;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(235, 133, 235, 0.306);
+    border-radius: 50px; /* Optionnel pour arrondir les coins */
+    padding: 10px; /* Ajuste selon tes besoins */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optionnel : ajoute une ombre subtile */
+    margin: 10px 0; /* Espacement autour des h2 */
+}
+h2{
+    color: #957DAD;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(235, 133, 235, 0.306);
+    border-radius: 50px; /* Optionnel pour arrondir les coins */
+    padding: 10px; /* Ajuste selon tes besoins */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optionnel : ajoute une ombre subtile */
+    margin: 10px 0; /* Espacement autour des h2 */
+
+}
+h3{
+    color: #C0AFE2;
+
+}
+h4{
+    color: #B19CD7;
+}
+p{
+    color: #957DAD;
+}
+strong{
+    color: #B19CD7;
+}
+a {
+    color: #C0AFE2; /* Couleur de base du lien */
+    text-decoration: none; /* Retire le soulignement par défaut */
+    font-weight: bold; /* Pour un texte plus accentué */
+    position: relative;
+    transition: color 0.3s ease; /* Transition douce sur la couleur */
+}
+
+a:hover {
+    color: #B19CD7; /* Couleur du lien au survol */
+}
+
+a::after {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    text-decoration: none;
+    font-size: 18px; /* Taille légèrement augmentée pour accentuer l'effet */
+    text-align: center;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #64508b; /* Couleur de la ligne */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: bottom right;
+    display: inline-block;
+    padding: 10px 20px; /* Ajuste les marges intérieures */
+    background-color: #B19CD7; /* Couleur de fond */
+    color: rgba(0, 0, 0, 0); /* Couleur du texte */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px; /* Arrondit les coins pour un effet rond */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition douce */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de relief */
+}
+
+a:hover::after {
+    color: rgba(0, 0, 0, 0);
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    background-color: #b19cd735; /* Change la couleur de fond au survol */
+    transform: scale(1.05); /* Légère mise en avant au survol */
+}
+a:active {
+    transform: scale(0.95); /* Légère réduction lors du clic */
+}
+
+
+------------[Tableau]---------------
+.bubble-title {
+    display: flex; /* Utilise flexbox pour centrer le contenu */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    background-color: rgba(235, 133, 235, 0.306); /* Fond léger avec transparence */
+    border-radius: 10px; /* Arrondit les coins */
+    padding: 10px 20px; /* Espace intérieur */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Ombre pour effet de profondeur */
+    margin-bottom: 20px; /* Espace en dessous de la bulle */
+}
+
+.bubble-title h3 {
+    color: #957DAD;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(235, 133, 235, 0.306);
+    border-radius: 50px; /* Optionnel pour arrondir les coins */
+    padding: 10px; /* Ajuste selon tes besoins */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optionnel : ajoute une ombre subtile */
+    margin: 10px 0; /* Espacement autour des h2 */
+    width: 264px;
+    display: block;
+    margin: auto;
+}
+
+section{
+    margin-top: 25px;
+}
+.saga-table {
+    width: 100%; /* Largeur du tableau */
+    border-collapse: collapse; /* Supprime les espaces entre les cellules */
+    margin: 20px 0; /* Marge au-dessus et en dessous du tableau */
+}
+
+.saga-table th, .saga-table td {
+    border: 1px solid #ddd; /* Bordure légère */
+    padding: 10px; /* Espacement intérieur */
+    text-align: center; /* Alignement du texte à gauche */
+}
+
+.saga-table th {
+    text-align: center;
+    background-color: rgba(239, 194, 239, 0.8); /* Couleur de fond pour l'en-tête */
+    color: white; /* Couleur du texte de l'en-tête */
+    font-size: 18px; /* Taille du texte de l'en-tête */
+    
+}
+
+.saga-table tr:nth-child(even) {
+    background-color: rgba(52, 152, 219, 0.1); /* Couleur de fond alternée pour les lignes paires */
+}
+
+.saga-table tr:hover {
+    background-color: rgba(231, 76, 60, 0.2); /* Couleur de fond au survol des lignes */
+}
+.saga-table th:nth-child(2), 
+.saga-table td:nth-child(2) {
+    border-left: 3px solid #fff; /* Bordure blanche pour la colonne de droite */
+}
+
+.saga-table tr:nth-child(even) {
+    background-color: rgba(52, 152, 219, 0.1); /* Couleur de fond alternée pour les lignes paires */
+}
+
+.saga-table tr:hover {
+    background-color: rgba(231, 76, 60, 0.2); /* Couleur de fond au survol des lignes */
+}
