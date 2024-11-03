@@ -1,221 +1,746 @@
+/* Section des autres albums */
+.other-albums {
+    margin-top: 40px;
+    text-align: center;
+}
 
-/*Tête*/
+.other-albums h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: linear-gradient(135deg, #555, #333);
+    border-radius: 8px;
+}
+
+.album-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.album {
+    width: 150px;
+    text-align: center;
+    color: #b0b0b0;
+}
+
+.album img {
+    width: 100%;
+    border-radius: 10px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    filter: grayscale(100%); /* Pochette en noir et blanc par défaut */
+    border: 1px solid #555;
+}
+
+.album img:hover {
+    filter: grayscale(0%); /* Devient en couleur au survol */
+    transform: scale(1.05); /* Légère mise en avant de l'image */
+}
+
+.album p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #d3d3d3;
+}
+/* Conteneur principal */
 .container {
-    display: flex; /* Utilise flexbox pour disposer les éléments côte à côte */
-    align-items: flex-start; /* Aligne le haut des éléments */
-    margin: 15px; /* Marge autour du conteneur */
-    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    gap: 20px;
 }
 
-.music-interface, .info-box {
+/* Section supérieure pour music-player et tracklist */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Music player et Tracklist dans la top-section */
+.music-player, .tracklist {
+    flex: 1;
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles pour la section des autres albums */
+.other-albums {
+    width: 100%;
     text-align: center;
-    background: linear-gradient(135deg, rgba(169, 224, 228, 0.279), rgba(239, 194, 239, 0.8));; /* Couleur de fond avec transparence pour les deux boîtes */
-    border-radius: 30px; /* Arrondir les coins */
-    padding: 40px; /* Espace intérieur */
-    max-width: 45%; /* Largeur maximale pour chaque boîte */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ombre pour effet de profondeur */
-    
-}
-.tracklist {
-    background: linear-gradient(135deg, rgba(169, 224, 228, 0.279), rgba(239, 194, 239, 0.8)); /* Dégradé */
-    border-radius: 15px; /* Coins arrondis */
-    padding: 20px; /* Espace intérieur */
-    color: white; /* Couleur du texte */
-    max-width: 400px; /* Largeur maximale de la box */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ombre pour effet de profondeur */
-    margin-top: 20px; /* Espace au-dessus de la box */
+    margin-top: 20px;
 }
 
+.other-albums h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: linear-gradient(135deg, #555, #333);
+    border-radius: 8px;
+}
+
+.album-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.album {
+    width: 150px;
+    text-align: center;
+    color: #b0b0b0;
+}
+
+.album img {
+    width: 100%;
+    border-radius: 10px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    filter: grayscale(100%); /* Pochette en noir et blanc par défaut */
+    border: 1px solid #555;
+}
+
+.album img:hover {
+    filter: grayscale(0%); /* Devient en couleur au survol */
+    transform: scale(1.05); /* Légère mise en avant de l'image */
+}
+
+.album p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #d3d3d3;
+}
+/* Style de fond global avec un dégradé sombre et subtil */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: rgba(28, 28, 28, 0.9);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1), inset 0px 0px 10px rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+/* Section supérieure pour music-player et tracklist */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Music player et Tracklist dans la top-section */
+.music-player, .tracklist {
+    flex: 1;
+    padding: 20px;
+    background: rgba(36, 36, 36, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.music-player img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.music-player h2, .music-player p {
+    color: #d3d3d3;
+    text-align: center;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.play-button {
+    width: 20px;
+    height: 20px;
+    background: #e0e0e0;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    transition: transform 0.3s ease;
+}
+
+.play-button:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: #666;
+    border-radius: 2px;
+    margin: 0 10px;
+}
+
+.time {
+    font-size: 0.9em;
+    color: #b0b0b0;
+}
+
+/* Tracklist - Lien de chaque titre */
 .tracklist h3 {
-    margin: 0 0 10px 0; /* Marges autour du titre */
-    font-size: 20px; /* Taille du titre */
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e0e0e0;
     text-align: center;
+    background: linear-gradient(135deg, #3c3c3c, #1f1f1f);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
 }
 
 .tracklist ul {
-    list-style-type: none; /* Supprime les puces par défaut */
+    list-style: none;
+    padding: 0;
 }
 
 .tracklist li {
-    padding: 5px 0; /* Espacement entre les éléments de la liste */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Ligne de séparation */
+    margin: 8px 0;
 }
 
-.tracklist li:last-child {
-    border-bottom: none; /* Retire la ligne de séparation pour le dernier élément */
-}
-
-body{
-    background-color: rgb(255, 227, 227);
-    background-image: radial-gradient(white 1px, transparent 1px);
-    background-size: 10px 10px;
-    margin: 40px;
-}
-body, a{
-    font-family: 'Cinzel', serif; /* Police épique et dramatique */
-    font-weight: 700; /* Accentue l'effet théâtral */
-    color: #957DAD;
-}
-h1{
-    color: #957DAD;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(235, 133, 235, 0.306);
-    border-radius: 50px; /* Optionnel pour arrondir les coins */
-    padding: 10px; /* Ajuste selon tes besoins */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optionnel : ajoute une ombre subtile */
-    margin: 10px 0; /* Espacement autour des h2 */
-}
-h2{
-    color: #957DAD;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(235, 133, 235, 0.306);
-    border-radius: 50px; /* Optionnel pour arrondir les coins */
-    padding: 10px; /* Ajuste selon tes besoins */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optionnel : ajoute une ombre subtile */
-    margin: 10px 0; /* Espacement autour des h2 */
-
-}
-h3{
-    color: #C0AFE2;
-
-}
-h4{
-    color: #B19CD7;
-}
-p{
-    color: #957DAD;
-}
-strong{
-    color: #B19CD7;
-}
-a {
-    color: #C0AFE2; /* Couleur de base du lien */
-    text-decoration: none; /* Retire le soulignement par défaut */
-    font-weight: bold; /* Pour un texte plus accentué */
-    position: relative;
-    transition: color 0.3s ease; /* Transition douce sur la couleur */
-}
-
-a:hover {
-    color: #B19CD7; /* Couleur du lien au survol */
-}
-
-a::after {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #3498db;
+.tracklist li a {
+    color: #a0a0a0;
     text-decoration: none;
-    font-size: 18px; /* Taille légèrement augmentée pour accentuer l'effet */
-    text-align: center;
-    border-radius: 50px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    content: "";
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.tracklist li a:hover {
+    color: #fff;
+}
+
+.tracklist li a::after {
+    content: '';
     position: absolute;
     left: 0;
     bottom: -2px;
     width: 100%;
     height: 2px;
-    background-color: #64508b; /* Couleur de la ligne */
+    background: #00ffff;
     transform: scaleX(0);
+    transform-origin: right;
     transition: transform 0.3s ease;
-    transform-origin: bottom right;
-    display: inline-block;
-    padding: 10px 20px; /* Ajuste les marges intérieures */
-    background-color: #B19CD7; /* Couleur de fond */
-    color: rgba(0, 0, 0, 0); /* Couleur du texte */
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 50px; /* Arrondit les coins pour un effet rond */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition douce */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de relief */
 }
 
-a:hover::after {
-    color: rgba(0, 0, 0, 0);
+.tracklist li a:hover::after {
     transform: scaleX(1);
-    transform-origin: bottom left;
-    background-color: #b19cd735; /* Change la couleur de fond au survol */
-    transform: scale(1.05); /* Légère mise en avant au survol */
-}
-a:active {
-    transform: scale(0.95); /* Légère réduction lors du clic */
+    transform-origin: left;
 }
 
-
-------------[Tableau]---------------
-.bubble-title {
-    display: flex; /* Utilise flexbox pour centrer le contenu */
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    background-color: rgba(235, 133, 235, 0.306); /* Fond léger avec transparence */
-    border-radius: 10px; /* Arrondit les coins */
-    padding: 10px 20px; /* Espace intérieur */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Ombre pour effet de profondeur */
-    margin-bottom: 20px; /* Espace en dessous de la bulle */
-}
-
-.bubble-title h3 {
-    color: #957DAD;
+/* Section des autres albums */
+.other-albums {
+    width: 100%;
     text-align: center;
+    margin-top: 20px;
+}
+
+.other-albums h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: linear-gradient(135deg, #555, #333);
+    border-radius: 8px;
+}
+
+.album-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.album {
+    width: 150px;
+    text-align: center;
+    color: #b0b0b0;
+    transition: transform 0.3s ease;
+}
+
+.album:hover {
+    transform: scale(1.05);
+}
+
+.album img {
+    width: 100%;
+    border-radius: 10px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    filter: grayscale(100%);
+    border: 1px solid #555;
+}
+
+.album img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.album p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #d3d3d3;
+}
+/* Tracklist - Lien de chaque titre */
+.tracklist li a {
+    color: #a0a0a0;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+}
+
+.tracklist li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(0, 255, 255, 0.3), transparent);
+    transition: transform 0.4s ease;
+    transform: skewX(30deg);
+}
+
+.tracklist li a:hover::before {
+    transform: translateX(100%);
+}
+
+.tracklist li a:hover {
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+/* Effet de "glitch" additionnel */
+.tracklist li a::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 255, 255, 0.15);
+    opacity: 0;
+    transform: skewX(-15deg);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tracklist li a:hover::after {
+    opacity: 1;
+    transform: translateY(-100%);
+}
+/* Fond global avec une légère animation */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
+    background-size: 400% 400%;
+    animation: backgroundAnimation 20s ease infinite;
+    color: #e0e0e0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(235, 133, 235, 0.306);
-    border-radius: 50px; /* Optionnel pour arrondir les coins */
-    padding: 10px; /* Ajuste selon tes besoins */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optionnel : ajoute une ombre subtile */
-    margin: 10px 0; /* Espacement autour des h2 */
-    width: 264px;
-    display: block;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Animation de dégradé de fond */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
     margin: auto;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: rgba(28, 28, 28, 0.85);
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.2), inset 0px 0px 10px rgba(0, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    transition: box-shadow 0.3s ease;
 }
 
-section{
-    margin-top: 25px;
-}
-.saga-table {
-    width: 100%; /* Largeur du tableau */
-    border-collapse: collapse; /* Supprime les espaces entre les cellules */
-    margin: 20px 0; /* Marge au-dessus et en dessous du tableau */
+/* Glitch effect on hover for the main container */
+.container:hover {
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.4), inset 0px 0px 15px rgba(0, 255, 255, 0.15);
 }
 
-.saga-table th, .saga-table td {
-    border: 1px solid #ddd; /* Bordure légère */
-    padding: 10px; /* Espacement intérieur */
-    text-align: center; /* Alignement du texte à gauche */
-}
-
-.saga-table th {
+/* Effet de "glitch" sur les titres */
+.music-player h2, .tracklist h3, .other-albums h3 {
+    position: relative;
+    font-size: 1.2em;
+    color: #e0e0e0;
     text-align: center;
-    background-color: rgba(239, 194, 239, 0.8); /* Couleur de fond pour l'en-tête */
-    color: white; /* Couleur du texte de l'en-tête */
-    font-size: 18px; /* Taille du texte de l'en-tête */
-    
+    background: linear-gradient(135deg, #3c3c3c, #1f1f1f);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
 }
 
-.saga-table tr:nth-child(even) {
-    background-color: rgba(52, 152, 219, 0.1); /* Couleur de fond alternée pour les lignes paires */
+.music-player h2::before, .tracklist h3::before, .other-albums h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(0, 255, 255, 0.4), transparent);
+    transform: skewX(30deg);
+    transition: transform 0.5s ease;
 }
 
-.saga-table tr:hover {
-    background-color: rgba(231, 76, 60, 0.2); /* Couleur de fond au survol des lignes */
-}
-.saga-table th:nth-child(2), 
-.saga-table td:nth-child(2) {
-    border-left: 3px solid #fff; /* Bordure blanche pour la colonne de droite */
+.music-player h2:hover::before, .tracklist h3:hover::before, .other-albums h3:hover::before {
+    transform: translateX(100%);
 }
 
-.saga-table tr:nth-child(even) {
-    background-color: rgba(52, 152, 219, 0.1); /* Couleur de fond alternée pour les lignes paires */
+/* Ajouter un effet de glitch léger sur les titres */
+.music-player h2::after, .tracklist h3::after, .other-albums h3::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 255, 255, 0.1);
+    opacity: 0;
+    transform: skewX(-10deg);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.saga-table tr:hover {
-    background-color: rgba(231, 76, 60, 0.2); /* Couleur de fond au survol des lignes */
+.music-player h2:hover::after, .tracklist h3:hover::after, .other-albums h3:hover::after {
+    opacity: 1;
+    transform: translateY(-100%);
 }
+
+/* Effet futuriste sur les albums */
+.album img {
+    width: 100%;
+    border-radius: 10px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.2);
+}
+
+.album img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.4);
+}
+
+/* Légère animation de "lueur" pour le texte */
+.tracklist li a {
+    color: #a0a0a0;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.tracklist li a:hover {
+    color: #00ffff;
+    text-shadow: 0px 0px 5px #00ffff, 0px 0px 10px rgba(0, 255, 255, 0.6);
+}
+
+.tracklist li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: #00ffff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.tracklist li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.nier-logo {
+    display: block;
+    margin: 20px auto; /* Centrer l'image */
+    max-width: 100%; /* Rendre l'image responsive */
+    height: auto; /* Garder les proportions de l'image */
+}
+.futuristic-link {
+    position: relative;
+    color: #fff; /* Couleur de base du texte */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    font-size: 1.5rem; /* Taille de la police ajustée */
+    display: inline-block; /* Permet à la propriété 'transform' de fonctionner correctement */
+    text-align: center; /* Centre le texte */
+    transition: color 0.3s, text-shadow 0.3s; /* Transition douce pour la couleur et l'ombre */
+}
+
+.futuristic-link h2 {
+    margin: 0; /* Supprime la marge par défaut du h2 */
+}
+
+/* Ajout de l'effet de glitch pour le survol */
+.futuristic-link::before,
+.futuristic-link::after {
+    content: 'Weight of the World'; /* Texte identique pour l'effet glitch */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ff3d00; /* Couleur du texte en "glitch" */
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); /* Masque le texte */
+    animation: glitch-anim 1s infinite linear alternate-reverse; /* Animation du glitch */
+}
+
+.futuristic-link::after {
+    color: #00bfff; /* Autre couleur pour le glitch */
+    animation: glitch-anim 1s infinite linear alternate; /* Animation différente */
+}
+
+/* Effets de survol */
+.futuristic-link:hover {
+    color: #00bfff; /* Couleur du texte au survol */
+    text-shadow: 0 0 5px #ff3d00, 0 0 10px #ff3d00, 0 0 15px #ff3d00; /* Ombres lumineuses */
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(42px, 9999px, 42px, 0);
+        transform: translate(0);
+    }
+    20% {
+        clip: rect(85px, 9999px, 76px, 0);
+        transform: translate(-5px, 5px);
+    }
+    40% {
+        clip: rect(30px, 9999px, 52px, 0);
+        transform: translate(5px, -5px);
+    }
+    60% {
+        clip: rect(20px, 9999px, 20px, 0);
+        transform: translate(-5px, 5px);
+    }
+    80% {
+        clip: rect(50px, 9999px, 70px, 0);
+        transform: translate(5px, -5px);
+    }
+    100% {
+        clip: rect(40px, 9999px, 90px, 0);
+        transform: translate(-5px, 5px);
+    }
+}
+.tracklist a {
+    position: relative;
+    color: #fff; /* Couleur de base du texte */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    font-size: 1.5rem; /* Taille de la police ajustée */
+    display: inline-block; /* Permet à la propriété 'transform' de fonctionner correctement */
+    text-align: center; /* Centre le texte */
+    transition: color 0.3s, text-shadow 0.3s; /* Transition douce pour la couleur et l'ombre */
+}
+
+.tracklist h2 {
+    margin: 0; /* Supprime la marge par défaut du h2 */
+}
+
+/* Ajout de l'effet de glitch pour le lien */
+.tracklist a::before,
+.tracklist a::after {
+    content: attr(data-title); /* Utilise l'attribut data-title pour le texte */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ff3d00; /* Couleur du texte en "glitch" */
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); /* Masque le texte */
+    animation: glitch-anim 1s infinite linear alternate-reverse; /* Animation du glitch */
+}
+
+.tracklist a::after {
+    color: #00bfff; /* Autre couleur pour le glitch */
+    animation: glitch-anim 1s infinite linear alternate; /* Animation différente */
+}
+
+/* Effets de survol */
+.tracklist a:hover {
+    color: #00bfff; /* Couleur du texte au survol */
+    text-shadow: 0 0 5px #ff3d00, 0 0 10px #ff3d00, 0 0 15px #ff3d00; /* Ombres lumineuses */
+}
+
+/* Application de l'effet glitch à tout le texte */
+.tracklist a h2 {
+    position: relative;
+    z-index: 1; /* S'assure que le texte est au-dessus des pseudo-éléments */
+}
+
+/* Ajustement des pseudo-éléments pour les placer correctement */
+.tracklist a::before,
+.tracklist a::after {
+    z-index: -1; /* Place les pseudo-éléments derrière le texte */
+}
+
+/* Animation du glitch */
+@keyframes glitch-anim {
+    0% {
+        clip: rect(42px, 9999px, 42px, 0);
+        transform: translate(0);
+    }
+    20% {
+        clip: rect(85px, 9999px, 76px, 0);
+        transform: translate(-5px, 5px);
+    }
+    40% {
+        clip: rect(30px, 9999px, 52px, 0);
+        transform: translate(5px, -5px);
+    }
+    60% {
+        clip: rect(20px, 9999px, 20px, 0);
+        transform: translate(-5px, 5px);
+    }
+    80% {
+        clip: rect(50px, 9999px, 70px, 0);
+        transform: translate(5px, -5px);
+    }
+    100% {
+        clip: rect(40px, 9999px, 90px, 0);
+        transform: translate(-5px, 5px);
+    }
+}
+.tracklist a {
+    position: relative;
+    color: #fff; /* Couleur de base du texte */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    font-size: 1.5rem; /* Taille de la police ajustée */
+    display: inline-block; /* Permet à la propriété 'transform' de fonctionner correctement */
+    text-align: center; /* Centre le texte */
+    transition: color 0.3s, text-shadow 0.3s; /* Transition douce pour la couleur et l'ombre */
+}
+
+.tracklist h2 {
+    margin: 0; /* Supprime la marge par défaut du h2 */
+}
+
+/* Ajout de l'effet de glitch pour le lien */
+.tracklist a::before,
+.tracklist a::after {
+    content: attr(data-title); /* Utilise l'attribut data-title pour le texte */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ff3d00; /* Couleur du texte en "glitch" */
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); /* Masque le texte */
+    animation: glitch-anim 1s infinite linear alternate-reverse; /* Animation du glitch */
+}
+
+.tracklist a::after {
+    color: #00bfff; /* Autre couleur pour le glitch */
+    animation: glitch-anim 1s infinite linear alternate; /* Animation différente */
+}
+
+/* Effets de survol */
+.tracklist a:hover {
+    color: #00bfff; /* Couleur du texte au survol */
+    text-shadow: 0 0 5px #ff3d00, 0 0 10px #ff3d00, 0 0 15px #ff3d00; /* Ombres lumineuses */
+}
+
+/* Application de l'effet glitch à tout le texte */
+.tracklist a h2 {
+    position: relative;
+    z-index: 1; /* S'assure que le texte est au-dessus des pseudo-éléments */
+}
+
+/* Ajustement des pseudo-éléments pour les placer correctement */
+.tracklist a::before,
+.tracklist a::after {
+    z-index: -1; /* Place les pseudo-éléments derrière le texte */
+}
+
+/* Animation du glitch */
+@keyframes glitch-anim {
+    0% {
+        clip: rect(42px, 9999px, 42px, 0);
+        transform: translate(0);
+    }
+    20% {
+        clip: rect(85px, 9999px, 76px, 0);
+        transform: translate(-5px, 5px);
+    }
+    40% {
+        clip: rect(30px, 9999px, 52px, 0);
+        transform: translate(5px, -5px);
+    }
+    60% {
+        clip: rect(20px, 9999px, 20px, 0);
+        transform: translate(-5px, 5px);
+    }
+    80% {
+        clip: rect(50px, 9999px, 70px, 0);
+        transform: translate(5px, -5px);
+    }
+    100% {
+        clip: rect(40px, 9999px, 90px, 0);
+        transform: translate(-5px, 5px);
+    }
+}
+body {
+    font-family: 'Orbitron', sans-serif; /* Police pour tout le corps */
+    background-color: #000; /* Couleur de fond, par exemple noir pour un effet futuriste */
+    color: #fff; /* Couleur du texte par défaut */
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif; /* Assurez-vous que le titre utilise la même police */
+}
+
+/* Style de la tracklist comme défini précédemment */
+.tracklist a {
+    position: relative;
+    color: #fff; /* Couleur de base du texte */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    font-size: 1.5rem; /* Taille de la police ajustée */
+    display: inline-block; /* Permet à la propriété 'transform' de fonctionner correctement */
+    text-align: center; /* Centre le texte */
+    transition: color 0.3s, text-shadow 0.3s; /* Transition douce pour la couleur et l'ombre */
+}
+
+/* Ajoutez les autres styles de votre tracklist ici */
